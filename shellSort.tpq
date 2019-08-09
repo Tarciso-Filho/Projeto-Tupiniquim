@@ -1,0 +1,50 @@
+listaInteiro shell_sort ( listaInteiro desordenada, inteiro tamanho )
+{
+	inteiro i;
+	inteiro j;
+	inteiro h;
+	inteiro auxiliar;
+	booleano terminou;
+	listaInteiro ordenada = desordenada;
+
+	repitaAte ( h = 1; h < tamanho; h = 3*h+1 )
+	{
+		
+	}
+
+	repitaEnquanto ( h > 0 )
+	{
+		h = (h-1)/3;
+		repitaAte ( i = h; i < tamanho; i += 1 )
+		{
+			auxiliar = ordenada[ i ];
+			j = i;
+			terminou = falso;
+			repitaEnquanto ( ordenada[ j - h ] > ordenada[ i ] && !terminou )
+			{
+				ordenada[ j ] = ordenada[ j - h ];
+				j -= h;
+				se ( j < h )
+				{
+					terminou = verdadeiro;
+				} 
+			}
+		}
+	}
+}
+
+inteiro principal ( vazio )
+{
+	listaInteiro array = { 2, 1, 1, 0, 1, 9, 9, 5 };
+	
+	mostreNaTela ( "Inicialmente a matriz eh [" );
+	mostreNaTela ( array );
+	mostreNaTela ( "]\nApos o Shell Sort, ela eh [" );
+
+	array = shell_sort( array, 8 );
+
+	mostreNaTela ( array );
+	mostreNaTela ( "]\n" );
+	
+	devolva 0;
+}

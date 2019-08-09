@@ -1,0 +1,5 @@
+inteiro principal ( vazio )
+{
+	mostreNaTela( "Hello World!" );
+	devolva 0;
+}

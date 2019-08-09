@@ -1,0 +1,32 @@
+vazio principal ( vazio )
+{
+	inteiro a = 0;
+	inteiro b = 1;
+	inteiro cursor = 0;
+	inteiro limite;
+	booleano caminho = verdadeiro;
+
+	recebaNoTeclado (limite);
+	mostreNaTela ( a );
+	mostreNaTela ( " ," );
+	mostreNaTela ( b );
+	mostreNaTela ( " ," );
+
+	repitaEnquanto ( cursor <= limite )
+	{
+		cursor = a + b;
+		mostreNaTela( cursor );
+		mostreNaTela( " ," );
+
+		se ( caminho )
+		{
+			a = a + b;
+		}senao
+		{
+			b = a + b;
+		}
+		
+		caminho = ( !caminho );
+	}
+}
+		

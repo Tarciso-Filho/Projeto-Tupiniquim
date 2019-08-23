@@ -1,32 +1,38 @@
-vazio principal ( vazio )
+vazio fibonacci ( inteiro fim )
 {
 	inteiro a = 0;
 	inteiro b = 1;
 	inteiro cursor = 0;
-	inteiro limite;
 	booleano caminho = verdadeiro;
 
-	recebaNoTeclado (limite);
 	mostreNaTela ( a );
 	mostreNaTela ( " ," );
 	mostreNaTela ( b );
-	mostreNaTela ( " ," );
 
-	repitaEnquanto ( cursor <= limite )
+
+	cursor = a + b;
+	repitaEnquanto ( cursor <= fim )
 	{
-		cursor = a + b;
-		mostreNaTela( cursor );
 		mostreNaTela( " ," );
+		mostreNaTela( cursor );
 
 		se ( caminho )
 		{
-			a = a + b;
+			a = cursor;
 		}senao
 		{
-			b = a + b;
+			b = cursor;
 		}
 		
 		caminho = ( !caminho );
+		
+		cursor = a + b;
 	}
 }
-		
+
+vazio principal ( vazio )
+{
+	inteiro limite = recebaNoTeclado();
+
+	fibonacci( limite );
+}

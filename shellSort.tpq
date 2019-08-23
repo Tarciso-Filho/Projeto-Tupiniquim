@@ -35,13 +35,19 @@ listaInteiro shell_sort ( listaInteiro desordenada, inteiro tamanho )
 
 inteiro principal ( vazio )
 {
-	listaInteiro array = { 2, 1, 1, 0, 1, 9, 9, 5 };
+	listaInteiro array[10];
+	inteiro cursor;
+
+	repitaContador( cursor; 0; 9; 1 )
+	{
+		array[cursor] = recebaNoTeclado();
+	}
 	
 	mostreNaTela ( "Inicialmente a matriz eh [" );
 	mostreNaTela ( array );
 	mostreNaTela ( "]\nApos o Shell Sort, ela eh [" );
 
-	array = shell_sort( array, 8 );
+	array = shell_sort( array, 10 );
 
 	mostreNaTela ( array );
 	mostreNaTela ( "]\n" );
